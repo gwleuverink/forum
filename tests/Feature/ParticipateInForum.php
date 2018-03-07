@@ -18,7 +18,7 @@ class ParticipateInForum extends TestCase
 
         // Arrange, act, assert
 
-        $this->post(route('reply.save', 1), []);
+        $this->post(route('reply.store', 1), []);
     }
 
     /** @test */
@@ -32,7 +32,7 @@ class ParticipateInForum extends TestCase
 
         // Wen the user adds a reply to the thread
         $reply = factory('App\Reply')->make();
-        $this->post(route('reply.save', $thread), $reply->toArray());
+        $this->post(route('reply.store', $thread), $reply->toArray());
 
         // Then their reply should be visible on the page
         $this->get(route('thread.show', $thread))

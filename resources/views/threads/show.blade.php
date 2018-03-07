@@ -30,7 +30,7 @@
     <br />
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <form action="{{ route('reply.save', $thread) }}" method="POST">
+            <form action="{{ route('reply.store', $thread) }}" method="POST">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <textarea class="form-control" name="body" placeholder="Have something to say?" rows="5"></textarea>
